@@ -1,0 +1,86 @@
+package com.model;
+
+import java.io.Serializable;
+import java.util.*;
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+//import org.hibernate.vaidator.constraints.*;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+
+@Entity
+@Component
+public class Product implements Serializable {
+	
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id                            
+	
+	 private  int id;
+	 private String name;	
+	 private String seller;
+	 private String description;
+	 private Float price;  
+	 private int quantity;
+	 
+	 @ManyToOne(fetch=FetchType.LAZY)     //many product will be connected to one category
+	 @JoinColumn(name="cid")           //this is a primary key on category table but after join it will be foreign key on product table
+	 private Category category;      //Category object is created
+	 
+	 
+	 
+	 
+	 public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getSeller() {
+		return seller;
+	}
+	public void setSeller(String seller) {
+		this.seller = seller;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public Float getPrice() {
+		return price;
+	}
+	public void setPrice(Float price) {
+		this.price = price;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
+	 
+
+	
+	
+	
+	
+}

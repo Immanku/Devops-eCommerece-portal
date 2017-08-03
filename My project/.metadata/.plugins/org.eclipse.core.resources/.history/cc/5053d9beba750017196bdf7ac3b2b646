@@ -1,0 +1,27 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HomeController {
+
+	@RequestMapping("/")
+	public String home(ModelMap model)
+	
+	{ model.addAttribute("message","welcome from  Spring MVC");
+	
+	return "landing";
+	}
+
+	@RequestMapping("/landing")
+	public String homeagain(ModelMap model)
+	
+	{ model.addAttribute("message","welcomeagain from  Spring MVC");
+	
+	return "landing";
+	}
+
+
+}

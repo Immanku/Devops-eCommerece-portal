@@ -1,0 +1,45 @@
+//package com.model;
+//import java.io.Serializable;
+//import java.util.*;
+//import javax.persistence.*;
+//import javax.validation.constraints.*;
+////import org.hibernate.vaidator.constraints.*;
+//
+//import org.springframework.stereotype.Component;
+//import org.springframework.stereotype.Service;
+//
+//@Component
+//@Entity
+//@Table(name="Category")
+//public class Category {
+//	@Id        //it will create primary key value
+//	private int cid;   //this is a primary key
+//	private String name;                        
+//	                                                  // FetchType is a Enum that have only 2 numeric constants Lazy and Eager(it will fetch data from category table  and products also)
+//	
+//	@OneToMany(targetEntity=Product.class, fetch=FetchType.EAGER,mappedBy="category")  //@OneToMany it is a join annotation which will map the relationship between category table and the product table//when the hibernate
+//	                                                                                   //fetching the data it will load the object relationship of category table with product table// hibernate is used by default it is LAZY(it will not automatically call
+//	                                                                                    //relationship and the load product detail also) but we use EAGER and it will be mapped by a parent category. //one category will be connected to many product
+//	private Set<Product> products=new HashSet<Product>(0);
+//	
+//	public int getCid() {
+//		return cid;
+//	}
+//	public void setCid(int cid) {
+//		this.cid = cid;
+//	}
+//	public String getName() {
+//		return name;
+//	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//	public Set<Product> getProducts() {
+//		return products;
+//	}
+//	public void setProducts(Set<Product> products) {
+//		this.products = products;
+//	}
+//
+//
+//}

@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: mayu9
+Class-Path: h2-1.4.195.jar
+Build-Jdk: 1.8.0_141
+Created-By: Maven Integration for Eclipse
+

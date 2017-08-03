@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;eStoreproject/src/main/webapp/WEB-INF/dispactcher-servlet.xml&apos; to &apos;dispatcher-servlet.xml&apos;" description="Rename resource &apos;dispactcher-servlet.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/dispactcher-servlet.xml" name="dispatcher-servlet.xml" stamp="1501485474008" updateReferences="true"/>
+</session>
